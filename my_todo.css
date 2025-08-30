@@ -1,0 +1,111 @@
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f5fa 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  color: #23213a;
+  scroll-behavior: smooth;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+h1 {
+  text-align: center;
+  margin: 36px 0 18px 0;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #5b5f97;
+  text-shadow: 0 2px 12px #e0e7ef;
+}
+
+/* Container */
+.todo-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(91, 95, 151, 0.08);
+}
+
+/* Input + Add Button */
+.todo-input {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.todo-input input {
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #bfc6e0;
+  font-size: 1rem;
+  outline: none;
+  background: #f4f5fa;
+  color: #23213a;
+  flex-grow: 1;
+}
+
+.todo-input input:focus {
+  border: 2px solid #5b5f97;
+  background: #fff;
+}
+
+.todo-input button {
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #bfc6e0 0%, #5b5f97 100%);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-input button:hover {
+  background: linear-gradient(90deg, #5b5f97 0%, #bfc6e0 100%);
+}
+
+/* Task List */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f5fa;
+  padding: 12px 18px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(91, 95, 151, 0.07);
+}
+
+li span {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+li input[type='checkbox'] {
+  transform: scale(1.2);
+}
+
+li button {
+  background: #ff5f5f;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 10px;
+}
+
+li button:hover {
+  background: #e53935;
+}

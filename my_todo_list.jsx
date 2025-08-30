@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 function App() {
   const [tasks, setTasks] = useState([
-    { id: 1, text: 'study' },
-    { id: 2, text: 'sleep' },
-    { id: 3, text: 'wake up' },
+    { id: 1, text: 'study', checked: false },
+    { id: 2, text: 'sleep', checked: true },
+    { id: 3, text: 'wake up', checked: false },
 
   ]);
   const [newTask, setNewTask] = useState('');
@@ -19,7 +19,8 @@ function App() {
     if (newTask.trim()) {
       const newTaskObj = {
         id: tasks.length + 1,
-        text: newTask
+        text: newTask,
+        checked: false,
       };
       setTasks([...tasks, newTaskObj]);
       setNewTask('');
